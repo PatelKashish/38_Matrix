@@ -12,6 +12,9 @@ with open('data2.csv', 'r') as file:
             break
     if found:
         new_amount = input("Enter new amount: ")
+        if(new_amount<=0):
+            print("Invalid Amount\n")
+            exit()
         old_balance = int(row[2])
         new_balance = old_balance + int(new_amount)
         row[2] = str(new_balance)
