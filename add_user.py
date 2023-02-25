@@ -11,9 +11,13 @@ with open('data2.csv', 'r') as file:
 # Ask the user for input values
 serial_no = new_serial_number
 prn = input("Enter PRN: ")
-balance = input("Enter Balance: ")
+balance = int(input("Enter Balance: "))
+if(balance<0):
+    print("Invalid Balance Amount")
+    exit()
 four_digit_num = input("Enter 4-digit PIN number: ")
 status = input("Enter Status: ")
+
 
 # Define the file path and open the CSV file for appending
 file_path = 'path/to/your/csv/file.csv'
